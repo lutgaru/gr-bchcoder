@@ -19,5 +19,6 @@
 # Boston, MA 02110-1301, USA.
 
 install(FILES
-    bchencoder_bchencoder_bb.block.yml DESTINATION share/gnuradio/grc/blocks
+    bchencoder_bchencoder_bb.block.yml
+    bchencoder_bchclass.block.yml DESTINATION share/gnuradio/grc/blocks
 )

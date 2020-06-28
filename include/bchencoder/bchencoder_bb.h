@@ -45,7 +45,7 @@ namespace gr {
        * class. bchencoder::bchencoder_bb::make is the public interface for
        * creating new instances.
        */
-      static sptr make(bch_type bchtype);
+      static sptr make(int bchtype);
     };
 
   } // namespace bchencoder

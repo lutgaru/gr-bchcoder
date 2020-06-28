@@ -23,5 +23,6 @@
 ########################################################################
 install(FILES
     api.h
-    bchencoder_bb.h DESTINATION include/bchencoder
+    bchencoder_bb.h
+    bchclass.h DESTINATION include/bchencoder
 )

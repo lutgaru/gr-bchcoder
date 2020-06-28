@@ -31,10 +31,27 @@ class qa_bchencoder_bb(gr_unittest.TestCase):
     def tearDown(self):
         self.tb = None
 
-    def test_001_t(self):
+    def test_001_bchencoder_bb(self):
+        src_data=(0, 1, 0, 1, 1, 1, 0, 1, 1, 1, 0,0, 1, 0, 1, 1, 1, 0, 1, 1, 1, 0)
+        expected_result=(0, 1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 1, 0)
+        src = blocks.vector_source_b(src_data)
+        contrl= blocks.throttle(gr.sizeof_char*1,10)
+        encod= bchencoder.bchencoder_bb(3)
+        dst = blocks.vector_sink_b()
+        print("conectando")
+        self.tb.connect(src, contrl)
+        self.tb.connect(contrl, encod)
+        self.tb.connect(encod, dst)
         # set up fg
+        print("inicio")
         self.tb.run()
+        
         # check data
+        result_data = dst.data()
+        print(src_data)
+        print(result_data)
+        self.assertTupleEqual(expected_result, result_data)
+        self.assertEqual(len(result_data),len(expected_result))
 
 
 if __name__ == '__main__':

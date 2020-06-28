@@ -22,7 +22,7 @@
 #define INCLUDED_BCHENCODER_BCHENCODER_BB_IMPL_H
 
 #include <bchencoder/bchencoder_bb.h>
-#include "bchclass.h"
+#include <bchencoder/bchclass.h>
 
 namespace gr {
   namespace bchencoder {
@@ -31,11 +31,11 @@ namespace gr {
     {
      private:
       // Nothing to declare in this block.
-      bch_type mybchtype;
+      //bch_type mybchtype;
       bchclass *bch;
 
      public:
-      bchencoder_bb_impl(bch_type bchtype);
+      bchencoder_bb_impl(int bchtype);
       ~bchencoder_bb_impl();
 
       // Where all the action really happens

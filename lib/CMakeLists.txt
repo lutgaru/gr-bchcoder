@@ -25,6 +25,7 @@ include(GrPlatform) #define LIB_SUFFIX
 
 list(APPEND bchencoder_sources
     bchencoder_bb_impl.cc
+    bchclass.cc
 )
 
 set(bchencoder_sources "${bchencoder_sources}" PARENT_SCOPE)

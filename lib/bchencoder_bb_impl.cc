@@ -30,7 +30,7 @@ namespace gr {
   namespace bchencoder {
 
     bchencoder_bb::sptr
-    bchencoder_bb::make(bch_type bchtype)
+    bchencoder_bb::make(int bchtype)
     {
       return gnuradio::get_initial_sptr
         (new bchencoder_bb_impl(bchtype));
@@ -40,13 +40,41 @@ namespace gr {
     /*
      * The private constructor
      */
-    bchencoder_bb_impl::bchencoder_bb_impl(bch_type bchtype)
+    bchencoder_bb_impl::bchencoder_bb_impl(int bchtype)
       : gr::block("bchencoder_bb",
               gr::io_signature::make(1, 1, sizeof(unsigned char)),
-              gr::io_signature::make(1, 1, sizeof(unsigned char))),
+              gr::io_signature::make(1, 1, sizeof(unsigned char)))
             //mybchtype(bchtype)
     {
+      /* switch (bchtype)
+      {
+      case 1:
+        mybchtype=bch_type::BCH15_5;
+        break;
+      case 2:
+        mybchtype=bch_type::BCH15_7;
+        break;
+      case 3:
+        mybchtype=bch_type::BCH15_11;
+        break;
+      case 4:
+        mybchtype=bch_type::BCH31_6;
+        break;
+      case 5:
+        mybchtype=bch_type::BCH31_11;
+        break;
+      case 6:
+        mybchtype=bch_type::BCH63_7;
+        break;
+      case 7:
+        mybchtype=bch_type::BCH63_10;
+        break;
+      default:
+        break;
+      } */
+
       bch=new bchclass(bchtype);
+      set_output_multiple(bch->length);
     }
 
     /*
@@ -61,6 +89,7 @@ namespace gr {
     {
       /* <+forecast+> e.g. ninput_items_required[0] = noutput_items */
       ninput_items_required[0] = noutput_items*(bch->k/bch->length);
+      printf("input req: %d outputs:%d",ninput_items_required[0],noutput_items);
     }
 
     int
@@ -72,13 +101,21 @@ namespace gr {
       
       const unsigned char *in = (const unsigned char *) input_items[0];
       unsigned char *out = (unsigned char *) output_items[0];
-
+      uint8_t blockinput[bch->k];
+      uint8_t blockoutput[bch->length];
       // Do <+signal processing+>
 
       int blks = std::min(noutput_items / bch->length, ninput_items[0] / bch->k);
+      printf("bloques: %d",blks);
 
       for (int i = 0; i < blks; i++) {
-        
+          for(int j=0;j < bch->k;j++){
+            blockinput[j]=in[j+(i*bch->k)];
+          }
+          bch->encode_bch(blockinput,blockoutput);
+          for(int j=0;j < bch->length;j++){
+            out[j+(i*bch->length)]=blockoutput[j];
+          }
       }
       // Tell runtime system how many input items we consumed on
       // each input stream.
