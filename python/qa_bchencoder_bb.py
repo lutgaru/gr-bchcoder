@@ -22,6 +22,7 @@
 from gnuradio import gr, gr_unittest
 from gnuradio import blocks
 import bchencoder_swig as bchencoder
+import time
 
 class qa_bchencoder_bb(gr_unittest.TestCase):
 
@@ -32,26 +33,29 @@ class qa_bchencoder_bb(gr_unittest.TestCase):
         self.tb = None
 
     def test_001_bchencoder_bb(self):
-        src_data=(0, 1, 0, 1, 1, 1, 0, 1, 1, 1, 0,0, 1, 0, 1, 1, 1, 0, 1, 1, 1, 0)
+        src_data=(0, 1, 0, 1, 1, 1, 0, 1, 1, 1, 0)
         expected_result=(0, 1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 1, 0)
         src = blocks.vector_source_b(src_data)
-        contrl= blocks.throttle(gr.sizeof_char*1,10)
+        #contrl= blocks.throttle(gr.sizeof_char*1,10)
         encod= bchencoder.bchencoder_bb(3)
         dst = blocks.vector_sink_b()
         print("conectando")
-        self.tb.connect(src, contrl)
-        self.tb.connect(contrl, encod)
+        self.tb.connect(src, encod)
+        #self.tb.connect(contrl, encod)
         self.tb.connect(encod, dst)
         # set up fg
         print("inicio")
         self.tb.run()
-        
+        #self.tb.start()
+        #time.sleep(0.1)
+        #self.tb.stop()
+        #self.tb.wait()
         # check data
         result_data = dst.data()
         print(src_data)
         print(result_data)
         self.assertTupleEqual(expected_result, result_data)
-        self.assertEqual(len(result_data),len(expected_result))
+        #self.assertEqual(len(result_data),len(expected_result))
 
 
 if __name__ == '__main__':
