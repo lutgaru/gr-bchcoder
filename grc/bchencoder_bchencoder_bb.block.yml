@@ -7,9 +7,9 @@ templates:
 parameters:
 - id: bchtype
   label: Bch Type
-  dtype: int
-  default: 1
-  options: [1,2,3,4,5,6,7]
+  dtype: enum
+  default: '1'
+  options: ['1','2','3','4','5','6','7']
   option_labels: ['BCH15_5', 'BCH15_7', 'BCH15_11', 'BCH31_6', 'BCH31_11', 'BCH63_7', 'BCH63_10']
 inputs:
 - label: in
