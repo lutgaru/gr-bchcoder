@@ -20,5 +20,6 @@
 
 install(FILES
     bchencoder_bchencoder_bb.block.yml
-    bchencoder_bchclass.block.yml DESTINATION share/gnuradio/grc/blocks
+    bchencoder_bchclass.block.yml
+    bchencoder_bchdecoder_bb.block.yml DESTINATION share/gnuradio/grc/blocks
 )

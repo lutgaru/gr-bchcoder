@@ -24,5 +24,6 @@
 install(FILES
     api.h
     bchencoder_bb.h
-    bchclass.h DESTINATION include/bchencoder
+    bchclass.h
+    bchdecoder_bb.h DESTINATION include/bchencoder
 )

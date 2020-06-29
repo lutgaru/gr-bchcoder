@@ -10,10 +10,14 @@
 %{
 #include "bchencoder/bchencoder_bb.h"
 #include "bchencoder/bchclass.h"
+#include "bchencoder/bchdecoder_bb.h"
 #include "bchencoder/bchclass.h"
+#include "bchencoder/bchdecoder_bb.h"
 %}
 
 %include "bchencoder/bchencoder_bb.h"
 %include "bchencoder/bchclass.h"
 GR_SWIG_BLOCK_MAGIC2(bchencoder, bchencoder_bb);
 %include "bchencoder/bchclass.h"
+%include "bchencoder/bchdecoder_bb.h"
+GR_SWIG_BLOCK_MAGIC2(bchencoder, bchdecoder_bb);
