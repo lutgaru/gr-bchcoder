@@ -111,7 +111,7 @@ namespace gr {
       // Do <+signal processing+>
 
       int blks = std::min(noutput_items / bch->length, ninput_items[0] / bch->k);
-      printf("bloques: %d\n",blks);
+      printf("blocks: %d\n",blks);
 
       for (int i = 0; i < blks; i++) {
           for(int j=0;j < bch->k;j++){

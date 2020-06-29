@@ -312,7 +312,7 @@ namespace gr {
             t2 = 2 * t;
 
             /* first form the syndromes */
-            printf("S(x) = ");
+            //printf("S(x) = ");
 
             for (i = 1; i <= t2; i++) {
                 s[i] = 0;
@@ -327,9 +327,9 @@ namespace gr {
         */
                 /* convert syndrome from polynomial form to index form  */
                 s[i] = index_of[s[i]];
-                printf("%3d ", s[i]);
+                //printf("%3d ", s[i]);
             }
-            printf("\n");
+            //printf("\n");
 
             if (syn_error) {    /* if there are errors, try to correct them */
                 /*
@@ -429,11 +429,11 @@ namespace gr {
                     for (i = 0; i <= l[u]; i++)
                         elp[u][i] = index_of[elp[u][i]];
 
-                    printf("sigma(x) = ");
+                    //printf("sigma(x) = ");
         //            for (i = 0; i <= l[u]; i++)
         //                printf("%3d ", elp[u][i]);
-                    printf("\n");
-                    printf("Roots: ");
+                    //printf("\n");
+                    //printf("Roots: ");
 
                     /* Chien search: find roots of the error location polynomial */
                     for (i = 1; i <= l[u]; i++)
@@ -451,7 +451,7 @@ namespace gr {
                             root[count] = i;
                             loc[count] = n - i;
                             count++;
-                            printf("%3d ", n - i);
+                            //printf("%3d ", n - i);
                         }
                     }
                     printf("\n");
