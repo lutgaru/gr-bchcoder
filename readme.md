@@ -23,13 +23,13 @@ access to dir
 
 create a build directory
 
-`mkdir build`
-`cd build`
+- `mkdir build`
+- `cd build`
 
 make a project
 
-`cmake ../`
-`make`
+- `cmake ../`
+- `make`
 
 install module
 
