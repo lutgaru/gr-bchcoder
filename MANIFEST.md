@@ -3,15 +3,15 @@ brief: Short description of gr-bchencoder
 tags: # Tags are arbitrary, but look at CGRAN what other authors are using
   - sdr
 author:
-  - Author Name <authors@email.address>
-copyright_owner:
+  - Author Name <lutgaru@gmail.com>
+#copyright_owner:
   - Copyright Owner 1
 license:
-gr_supported_version: # Put a comma separated list of supported GR versions here
-#repo: # Put the URL of the repository here, or leave blank for default
+dependencies:
+  - gnuradio (>= 3.7.0)
+gr_supported_version: 3.8 
+repo: https://gitlab.com/lutgaru/gr-bchcoder.git
 #website: <module_website> # If you have a separate project website, put it here
 #icon: <icon_url> # Put a URL to a square image here that will be used as an icon on CGRAN
 ---
-A longer, multi-line description of gr-bchencoder.
-You may use some *basic* Markdown here.
-If left empty, it will try to find a README file instead.
+
