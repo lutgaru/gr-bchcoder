@@ -91,8 +91,8 @@ namespace gr {
       /* <+forecast+> e.g. ninput_items_required[0] = noutput_items */
       ninput_items_required[0] = (noutput_items*bch->k)/bch->length;
       
-      printf("input req: %d outputs:%d\n",ninput_items_required[0],noutput_items);
-      printf("len: %d k:%d\n",bch->length,bch->k);
+      //printf("input req: %d outputs:%d\n",ninput_items_required[0],noutput_items);
+      //printf("len: %d k:%d\n",bch->length,bch->k);
       
       
     }
@@ -111,7 +111,7 @@ namespace gr {
       // Do <+signal processing+>
 
       int blks = std::min(noutput_items / bch->length, ninput_items[0] / bch->k);
-      printf("bloques: %d\n",blks);
+      //printf("bloques: %d\n",blks);
 
       for (int i = 0; i < blks; i++) {
           for(int j=0;j < bch->k;j++){

@@ -8,8 +8,9 @@ parameters:
 - id: bchtype
   label: Bch Type
   dtype: enum
-  default: 'BCH15_5'
-  options: ['BCH15_5', 'BCH15_7', 'BCH15_11', 'BCH31_6', 'BCH31_11', 'BCH63_7', 'BCH63_10']
+  default: 1
+  options: [1,2,3,4,5,6,7]
+  option_labels: ['BCH15_5', 'BCH15_7', 'BCH15_11', 'BCH31_6', 'BCH31_11', 'BCH63_7', 'BCH63_10']
 inputs:
 - label: in
   domain: stream

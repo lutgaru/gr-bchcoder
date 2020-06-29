@@ -1,6 +1,6 @@
 id: bchencoder_bchclass
 label: bchclass
-category: '[bchencoder]'
+category: '[Bchencoder]'
 
 templates:
   imports: import bchencoder
