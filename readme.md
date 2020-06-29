@@ -3,9 +3,10 @@
 is a BCH encoder block for gnuradio, it is based in part on the project http://www.rajivchakravorty.com/source-code/uncertainty/multimedia-sim/html/index.html
 
 and the File: bch3.c from book 
-   Title:   Encoder/decoder for binary BCH codes in C (Version 3.1)
-   Author:  Robert Morelos-Zaragoza (robert@spectra.eng.hawaii.edu)
-   Date:    August 1994
+   
+- Title:   Encoder/decoder for binary BCH codes in C (Version 3.1)
+- Author:  Robert Morelos-Zaragoza (robert@spectra.eng.hawaii.edu)
+- Date:    August 1994
 
 
 
