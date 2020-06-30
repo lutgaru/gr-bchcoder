@@ -19,4 +19,7 @@ outputs:
 - label: out
   domain: stream
   dtype: byte
+documentation: |-
+  input: the input is a stream of bytes with values between 1 and 0 that represents a string of bits 
+
 file_format: 1
