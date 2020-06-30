@@ -1,6 +1,6 @@
-**BCH encoder block for gnuradio**
+**BCH encoder and decoder blocks for gnuradio**
 
-is a BCH encoder block for gnuradio, it is based in part on the project http://www.rajivchakravorty.com/source-code/uncertainty/multimedia-sim/html/index.html
+is a BCH encoder and decoder blocks for gnuradio, it is based in part on the project http://www.rajivchakravorty.com/source-code/uncertainty/multimedia-sim/html/index.html
 
 and the File: bch3.c from book 
    
