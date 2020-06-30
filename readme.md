@@ -1,12 +1,10 @@
 **BCH encoder and decoder blocks for gnuradio**
 
+Author: lutgaru
+
 is a BCH encoder and decoder blocks for gnuradio, it is based in part on the project http://www.rajivchakravorty.com/source-code/uncertainty/multimedia-sim/html/index.html
 
-and the File: bch3.c from book 
-   
-- Title:   Encoder/decoder for binary BCH codes in C (Version 3.1)
-- Author:  Robert Morelos-Zaragoza (robert@spectra.eng.hawaii.edu)
-- Date:    August 1994
+and the File: bch3.c from book  Encoder/decoder for binary BCH codes in C (Version 3.1) from Author:  Robert Morelos-Zaragoza (robert@spectra.eng.hawaii.edu) August 1994
 
 
 
