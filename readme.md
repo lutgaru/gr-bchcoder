@@ -14,6 +14,9 @@ QPSK simulation with bch encoding
 
 **installation instructions**
 
+
+
+
 clone repository 
 
 `git clone https://gitlab.com/lutgaru/gr-bchcoder.git`
@@ -21,6 +24,14 @@ clone repository
 access to dir
 
 `cd gr-bchcoder`
+
+**for 3.7**
+
+run this command before install
+
+`git checkout for3.7`
+
+**for 3.8+**
 
 create a build directory
 
@@ -49,5 +60,4 @@ make a radiooutoftree.conf in /etc/ld.so.conf.d/
 
 and add into `/usr/local/lib`
 
-**for 3.7 and mac**
-`git checkout for3.7`
+
