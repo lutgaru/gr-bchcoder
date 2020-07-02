@@ -1,0 +1,52 @@
+<block>
+  <name>Bchdecoder bb</name>
+  <key>bchencoder_bchdecoder_bb</key>
+  <category>[BCHENCODER]</category>
+  <import>import bchencoder</import>
+  <make>bchencoder.bchdecoder_bb($bchtype)</make>
+  <param>
+    <name>Bchtype</name>
+    <key>bchtype</key>
+    <type>enum</type>
+		<option>
+			<name>BCH15_5</name>
+			<key>1</key>
+		</option>
+		<option>
+			<name>BCH15_7</name>
+			<key>2</key>
+		</option>
+		<option>
+			<name>BCH15_11</name>
+			<key>3</key>
+		</option>
+		<option>
+			<name>BCH31_6</name>
+			<key>4</key>
+		</option>
+		<option>
+			<name>BCH31_11</name>
+			<key>5</key>
+		</option>
+    <option>
+			<name>BCH63_7</name>
+			<key>6</key>
+		</option>
+    <option>
+			<name>BCH63_10</name>
+			<key>7</key>
+		</option>
+    
+  </param>
+  <sink>
+    <name>in</name>
+    <type>byte</type>
+  </sink>
+  <source>
+    <name>out</name>
+    <type>byte</type>
+  </source>
+  <doc>input: the input is a stream of bytes with values between 1 and 0 that represents a string of bits which has been encoded in a compatible bch
+  
+  warnig: Entering unencoded bits can cause completely random operation and quite possibly an error</doc>
+</block>

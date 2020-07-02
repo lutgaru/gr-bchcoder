@@ -1,0 +1,20 @@
+<block>
+  <name>Bb</name>
+  <key>bchencoder_bb</key>
+  <category>[BCHENCODER]</category>
+  <import>import bchencoder</import>
+  <make>bchencoder.bb($bchtype)</make>
+  <param>
+    <name>Bchtype</name>
+    <key>bchtype</key>
+    <type>int</type>
+  </param>
+  <sink>
+    <name>in</name>
+    <type>byte</type>
+  </sink>
+  <source>
+    <name>out</name>
+    <type>byte</type>
+  </source>
+</block>

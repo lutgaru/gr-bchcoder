@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<block>
+  <name>Bchencoder bb</name>
+  <key>bchencoder_bchencoder_bb</key>
+  <category>[BCHENCODER]</category>
+  <import>import bchencoder</import>
+  <make>bchencoder.bchencoder_bb($bchtype)</make>
+  <!-- Make one 'param' node for every Parameter you want settable from the GUI.
+       Sub-nodes:
+       * name
+       * key (makes the value accessible as $keyname, e.g. in the make node)
+       * type -->
+  <param>
+    <name>Bchtype</name>
+    <key>bchtype</key>
+    <type>enum</type>
+		<option>
+			<name>BCH15_5</name>
+			<key>1</key>
+		</option>
+		<option>
+			<name>BCH15_7</name>
+			<key>2</key>
+		</option>
+		<option>
+			<name>BCH15_11</name>
+			<key>3</key>
+		</option>
+		<option>
+			<name>BCH31_6</name>
+			<key>4</key>
+		</option>
+		<option>
+			<name>BCH31_11</name>
+			<key>5</key>
+		</option>
+    <option>
+			<name>BCH63_7</name>
+			<key>6</key>
+		</option>
+    <option>
+			<name>BCH63_10</name>
+			<key>7</key>
+		</option>
+  </param>
+  <sink>
+    <name>in</name>
+    <type>byte</type>
+  </sink>
+  <source>
+    <name>out</name>
+    <type>byte</type>
+  </source>
+  <doc>input: the input is a stream of bytes with values between 1 and 0 that represents a string of bits </doc>
+</block>
