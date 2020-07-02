@@ -26,9 +26,9 @@
 #include <gnuradio/attributes.h>
 
 #ifdef gnuradio_bchencoder_EXPORTS
-#define BCHENCODER_API __GR_ATTR_EXPORT
+#  define BCHENCODER_API __GR_ATTR_EXPORT
 #else
-#define BCHENCODER_API __GR_ATTR_IMPORT
+#  define BCHENCODER_API __GR_ATTR_IMPORT
 #endif
 
 #endif /* INCLUDED_BCHENCODER_API_H */

@@ -35,7 +35,7 @@ namespace gr {
               gr::io_signature::make(1, 1, sizeof(unsigned char)))
     {
       bch=new bchclass(bchtype);
-      printf("construido");
+      //printf("construido");
       set_output_multiple(bch->k);
     }
 

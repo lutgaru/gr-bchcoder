@@ -74,7 +74,7 @@ namespace gr {
       } */
 
       bch=new bchclass(bchtype);
-      printf("construido");
+      //printf("construido");
       set_output_multiple(bch->length);
     }
 
